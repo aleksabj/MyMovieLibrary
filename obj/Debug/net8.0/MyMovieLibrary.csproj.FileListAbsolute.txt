@@ -147,3 +147,4 @@
 /Users/aleksabujor/MyMovieLibrary/bin/Debug/net8.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
 /Users/aleksabujor/MyMovieLibrary/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/aleksabujor/MyMovieLibrary/bin/Debug/net8.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+/Users/aleksabujor/MyMovieLibrary/obj/Debug/net8.0/MyMovieLibrary.sourcelink.json
