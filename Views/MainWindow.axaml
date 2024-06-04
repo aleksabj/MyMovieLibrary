@@ -1,12 +1,40 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="MyMovieLibrary.MainWindow"
-        Title="My Movie Library" Width="1000" Height="600"
-        SizeChanged="Window_SizeChanged">
+        Title="My Movie Library"
+        Width="1000"
+        Height="600"
+        SizeChanged="Window_SizeChanged"
+        Background="Black">
+    
+    <Window.Styles>
+        <!-- Define the styles for the entire application -->
+        <Style Selector="TextBlock">
+            <Setter Property="FontFamily" Value="Gill Sans MT"/>
+        </Style>
+
+        <Style Selector="Button">
+            <Setter Property="FontFamily" Value="Gill Sans MT"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+    </Window.Styles>
+
     <Grid>
+        <!-- Background Image -->
+        <!-- <Image Source="background.jpg"
+               Stretch="UniformToFill"
+               Grid.RowSpan="4"
+               Grid.ColumnSpan="2"
+               ZIndex="-1"/> -->
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/> <!-- For the navigation bar -->
+            <RowDefinition Height="Auto"/> <!-- For the genre filter buttons -->
             <RowDefinition Height="*"/> <!-- For content (scrollable area) -->
         </Grid.RowDefinitions>
 
@@ -17,16 +45,26 @@
 
         <!-- Title Section -->
         <TextBlock Text="My Movie Library" FontSize="20" FontWeight="Bold"
-                   HorizontalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2"/>
+                   HorizontalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2"
+                   Background="{Binding Background, RelativeSource={RelativeSource AncestorType=Window}}"/>
 
         <!-- Navigation Bar -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2">
-            <Button Content="Movies" Click="MoviesButton_Click" Margin="5"/>
-            <Button Content="Actors" Click="ActorsButton_Click" Margin="5"/>
+            <Button Content="Movies" Click="MoviesButton_Click" Margin="5" />
+            <Button Content="Actors" Click="ActorsButton_Click" Margin="5" />
+            <Button Content="Producers" Click="ProducersButton_Click" Margin="5" />
+            <Button Content="Want to Watch" Click="WantToWatchButton_Click" Margin="5" Background="#cce7ff"/>
         </StackPanel>
 
+        <!-- Genre Filter Buttons (wrapped inside a ScrollViewer) -->
+        <ScrollViewer x:Name="GenreFilterScrollViewer" Grid.Row="2" Grid.ColumnSpan="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" IsVisible="False">
+            <StackPanel x:Name="GenreFilterPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+                <!-- Genre buttons will be added here dynamically -->
+            </StackPanel>
+        </ScrollViewer>
+
         <!-- Scrollable Movie List Section -->
-        <ScrollViewer x:Name="MoviesScrollViewer" Grid.Row="2" Grid.Column="0" HorizontalScrollBarVisibility="Disabled"
+        <ScrollViewer x:Name="MoviesScrollViewer" Grid.Row="3" Grid.Column="0" HorizontalScrollBarVisibility="Disabled"
                       VerticalScrollBarVisibility="Auto">
             <ItemsControl x:Name="MoviesPanel">
                 <ItemsControl.ItemsPanel>
@@ -37,8 +75,8 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <!-- Scrollable Actors List Section (initially hidden) -->
-        <ScrollViewer x:Name="ActorsScrollViewer" Grid.Row="2" Grid.Column="0" HorizontalScrollBarVisibility="Disabled"
+        <!-- Scrollable Actor List Section (initially hidden) -->
+        <ScrollViewer x:Name="ActorsScrollViewer" Grid.Row="3" Grid.Column="0" HorizontalScrollBarVisibility="Disabled"
                       VerticalScrollBarVisibility="Auto" IsVisible="False">
             <ItemsControl x:Name="ActorsPanel">
                 <ItemsControl.ItemsPanel>
@@ -49,9 +87,21 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <!-- Details View Container -->
-        <StackPanel x:Name="DetailsPanel" Grid.Column="1" Grid.Row="2">
-            <!-- Detailed Movie or Actor Information Will Be Programmatically Added Here -->
-        </StackPanel>
+        <!-- Scrollable Producer List Section (initially hidden) -->
+        <ScrollViewer x:Name="ProducersScrollViewer" Grid.Row="3" Grid.Column="0" HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Auto" IsVisible="False">
+            <ItemsControl x:Name="ProducersPanel">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="4" HorizontalAlignment="Stretch" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- Details View Container with a white background -->
+        <ScrollViewer x:Name="DetailsScrollViewer" Grid.Column="1" Grid.Row="3" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="DetailsPanel" Background="Black"/>
+        </ScrollViewer>
     </Grid>
 </Window>
