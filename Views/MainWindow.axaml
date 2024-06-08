@@ -8,7 +8,7 @@
         Background="Black">
     
     <Window.Styles>
-        <!-- Define the styles for the entire application -->
+        <!--Define the styles for the entire application-->
         <Style Selector="TextBlock">
             <Setter Property="FontFamily" Value="Gill Sans MT"/>
         </Style>
@@ -34,7 +34,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/> <!-- For the navigation bar -->
-            <RowDefinition Height="Auto"/> <!-- For the genre filter buttons -->
+            <RowDefinition Height="Auto"/><!-- For the genre filter buttons-->
             <RowDefinition Height="*"/> <!-- For content (scrollable area) -->
         </Grid.RowDefinitions>
 
@@ -56,10 +56,10 @@
             <Button Content="Want to Watch" Click="WantToWatchButton_Click" Margin="5" Background="#cce7ff"/>
         </StackPanel>
 
-        <!-- Genre Filter Buttons (wrapped inside a ScrollViewer) -->
+        <!-- Genre Filter Buttons-->
         <ScrollViewer x:Name="GenreFilterScrollViewer" Grid.Row="2" Grid.ColumnSpan="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" IsVisible="False">
             <StackPanel x:Name="GenreFilterPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
-                <!-- Genre buttons will be added here dynamically -->
+
             </StackPanel>
         </ScrollViewer>
 
@@ -87,7 +87,7 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <!-- Scrollable Producer List Section (initially hidden) -->
+        <!-- Scrollable Producer List Section-->
         <ScrollViewer x:Name="ProducersScrollViewer" Grid.Row="3" Grid.Column="0" HorizontalScrollBarVisibility="Disabled"
                       VerticalScrollBarVisibility="Auto" IsVisible="False">
             <ItemsControl x:Name="ProducersPanel">
@@ -99,7 +99,6 @@
             </ItemsControl>
         </ScrollViewer>
 
-        <!-- Details View Container with a white background -->
         <ScrollViewer x:Name="DetailsScrollViewer" Grid.Column="1" Grid.Row="3" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
             <StackPanel x:Name="DetailsPanel" Background="Black"/>
         </ScrollViewer>
