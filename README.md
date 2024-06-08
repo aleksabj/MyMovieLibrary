@@ -64,17 +64,6 @@ If you prefer setting up the project manually, follow these steps:
 
    The application will start and should be accessible at `http://localhost:5000`.
 
-### **Configuration**
-
-The application reads the connection string for the MySQL database from the `appsettings.json` file. Ensure this file is correctly configured with your database server details:
-
-```json
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "server=127.0.0.1;port=3306;database=MovieDB;user=root;password=yourpassword"
-  }
-}
-```
 
 ### **Project Structure**
 
