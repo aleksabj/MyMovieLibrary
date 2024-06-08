@@ -33,6 +33,14 @@
 /Users/aleksabujor/.nuget/packages/microsoft.codeanalysis.common/3.8.0/lib/netcoreapp3.1/Microsoft.CodeAnalysis.dll
 /Users/aleksabujor/.nuget/packages/microsoft.codeanalysis.scripting.common/3.8.0/lib/netcoreapp3.1/Microsoft.CodeAnalysis.Scripting.dll
 /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/8.0.3/ref/net8.0/Microsoft.CSharp.dll
+/Users/aleksabujor/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/aleksabujor/.nuget/packages/microsoft.extensions.configuration/6.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.dll
+/Users/aleksabujor/.nuget/packages/microsoft.extensions.configuration.fileextensions/6.0.0/lib/netstandard2.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/Users/aleksabujor/.nuget/packages/microsoft.extensions.configuration.json/6.0.0/lib/netstandard2.1/Microsoft.Extensions.Configuration.Json.dll
+/Users/aleksabujor/.nuget/packages/microsoft.extensions.fileproviders.abstractions/6.0.0/lib/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/Users/aleksabujor/.nuget/packages/microsoft.extensions.fileproviders.physical/6.0.0/lib/net6.0/Microsoft.Extensions.FileProviders.Physical.dll
+/Users/aleksabujor/.nuget/packages/microsoft.extensions.filesystemglobbing/6.0.0/lib/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/Users/aleksabujor/.nuget/packages/microsoft.extensions.primitives/6.0.0/lib/net6.0/Microsoft.Extensions.Primitives.dll
 /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/8.0.3/ref/net8.0/Microsoft.VisualBasic.Core.dll
 /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/8.0.3/ref/net8.0/Microsoft.VisualBasic.dll
 /usr/local/share/dotnet/packs/Microsoft.NETCore.App.Ref/8.0.3/ref/net8.0/Microsoft.Win32.Primitives.dll

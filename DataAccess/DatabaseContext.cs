@@ -1,10 +1,17 @@
+using System.IO;
 using MySql.Data.MySqlClient;
+using Microsoft.Extensions.Configuration; 
 
 public static class DatabaseContext
 {
     public static MySqlConnection GetDBConnection()
     {
-        string connectionString = "server=127.0.0.1;port=3306;database=MovieDB;user=root;password=Jurnalist1";
+        var configuration = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json")
+            .Build();
+
+        string connectionString = configuration.GetConnectionString("DefaultConnection");
         return new MySqlConnection(connectionString);
     }
 }

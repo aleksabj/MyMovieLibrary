@@ -17,8 +17,8 @@ build_property.ProjectDir = /Users/aleksabujor/MyMovieLibrary/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[/Users/aleksabujor/MyMovieLibrary/App.axaml]
+[/Users/aleksabujor/MyMovieLibrary/src/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/aleksabujor/MyMovieLibrary/Views/MainWindow.axaml]
+[/Users/aleksabujor/MyMovieLibrary/src/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

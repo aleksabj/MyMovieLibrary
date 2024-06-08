@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RyrGoVxttkfiAg5PBHzukb0Xgt3ljKxGEkT8OW+WubgKaKiQohylSez2OxWYbzCVLBjxP9bGs0cw32GEE6f5zQ==",
+  "dgSpecHash": "HNSumKWCGLzcu5kQ67Q41xwm1lGFmRwD1iLlidIGWZKuSh/cWIQ+pGtAqZePEUi53NvZ7oWtLmPtJ1nLjK+eMA==",
   "success": true,
   "projectFilePath": "/Users/aleksabujor/MyMovieLibrary/MyMovieLibrary.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,14 @@
     "/Users/aleksabujor/.nuget/packages/microsoft.codeanalysis.csharp.scripting/3.8.0/microsoft.codeanalysis.csharp.scripting.3.8.0.nupkg.sha512",
     "/Users/aleksabujor/.nuget/packages/microsoft.codeanalysis.scripting.common/3.8.0/microsoft.codeanalysis.scripting.common.3.8.0.nupkg.sha512",
     "/Users/aleksabujor/.nuget/packages/microsoft.csharp/4.3.0/microsoft.csharp.4.3.0.nupkg.sha512",
+    "/Users/aleksabujor/.nuget/packages/microsoft.extensions.configuration/6.0.0/microsoft.extensions.configuration.6.0.0.nupkg.sha512",
+    "/Users/aleksabujor/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
+    "/Users/aleksabujor/.nuget/packages/microsoft.extensions.configuration.fileextensions/6.0.0/microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512",
+    "/Users/aleksabujor/.nuget/packages/microsoft.extensions.configuration.json/6.0.0/microsoft.extensions.configuration.json.6.0.0.nupkg.sha512",
+    "/Users/aleksabujor/.nuget/packages/microsoft.extensions.fileproviders.abstractions/6.0.0/microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512",
+    "/Users/aleksabujor/.nuget/packages/microsoft.extensions.fileproviders.physical/6.0.0/microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512",
+    "/Users/aleksabujor/.nuget/packages/microsoft.extensions.filesystemglobbing/6.0.0/microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512",
+    "/Users/aleksabujor/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "/Users/aleksabujor/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/Users/aleksabujor/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/aleksabujor/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
