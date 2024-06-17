@@ -1,4 +1,4 @@
-<!-- The main window of the application -->
+<!-- The root element of the Avalonia UI, a Window -->
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="MyMovieLibrary.MainWindow"
@@ -7,15 +7,15 @@
         Height="600"
         SizeChanged="Window_SizeChanged"
         Background="Black">
-    
-    <!-- Styles for the application -->
+
+    <!-- Define the styles for the entire application -->
     <Window.Styles>
-        <!-- Style for all TextBlocks -->
+        <!-- Define the style for all TextBlock elements -->
         <Style Selector="TextBlock">
             <Setter Property="FontFamily" Value="Gill Sans MT"/>
         </Style>
 
-        <!-- Style for all Buttons -->
+        <!-- Define the style for all Button elements -->
         <Style Selector="Button">
             <Setter Property="FontFamily" Value="Gill Sans MT"/>
             <Setter Property="CornerRadius" Value="20"/>
@@ -26,13 +26,13 @@
         </Style>
     </Window.Styles>
 
-    <!-- Main layout grid -->
+    <!-- Define a Grid layout for the window -->
     <Grid>
-        <!-- Grid row and column definitions -->
+        <!-- Define the row and column structure of the Grid -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/> <!-- For the navigation bar -->
-            <RowDefinition Height="Auto"/><!-- For the genre filter buttons-->
+            <RowDefinition Height="Auto"/> <!-- For the genre filter buttons -->
             <RowDefinition Height="*"/> <!-- For content (scrollable area) -->
         </Grid.RowDefinitions>
 
@@ -48,16 +48,14 @@
 
         <!-- Navigation Bar -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2">
-            <!-- Navigation buttons -->
             <Button Content="Movies" Click="MoviesButton_Click" Margin="5" />
             <Button Content="Actors" Click="ActorsButton_Click" Margin="5" />
             <Button Content="Producers" Click="ProducersButton_Click" Margin="5" />
             <Button Content="Want to Watch" Click="WantToWatchButton_Click" Margin="5" Background="#cce7ff"/>
         </StackPanel>
 
-        <!-- Genre Filter Buttons-->
+        <!-- Genre Filter Buttons -->
         <ScrollViewer x:Name="GenreFilterScrollViewer" Grid.Row="2" Grid.ColumnSpan="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" IsVisible="False">
-            <!-- Panel for genre filter buttons -->
             <StackPanel x:Name="GenreFilterPanel" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
 
             </StackPanel>
@@ -66,11 +64,9 @@
         <!-- Scrollable Movie List Section -->
         <ScrollViewer x:Name="MoviesScrollViewer" Grid.Row="3" Grid.Column="0" HorizontalScrollBarVisibility="Disabled"
                       VerticalScrollBarVisibility="Auto">
-            <!-- Panel for movie items -->
             <ItemsControl x:Name="MoviesPanel">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <!-- Grid for movie items -->
                         <UniformGrid Columns="4" HorizontalAlignment="Stretch" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
@@ -80,34 +76,29 @@
         <!-- Scrollable Actor List Section (initially hidden) -->
         <ScrollViewer x:Name="ActorsScrollViewer" Grid.Row="3" Grid.Column="0" HorizontalScrollBarVisibility="Disabled"
                       VerticalScrollBarVisibility="Auto" IsVisible="False">
-            <!-- Panel for actor items -->
             <ItemsControl x:Name="ActorsPanel">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <!-- Grid for actor items -->
                         <UniformGrid Columns="4" HorizontalAlignment="Stretch" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </ScrollViewer>
 
-        <!-- Scrollable Producer List Section-->
+        <!-- Scrollable Producer List Section -->
         <ScrollViewer x:Name="ProducersScrollViewer" Grid.Row="3" Grid.Column="0" HorizontalScrollBarVisibility="Disabled"
                       VerticalScrollBarVisibility="Auto" IsVisible="False">
-            <!-- Panel for producer items -->
             <ItemsControl x:Name="ProducersPanel">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <!-- Grid for producer items -->
                         <UniformGrid Columns="4" HorizontalAlignment="Stretch" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </ScrollViewer>
 
-        <!-- Details Section -->
+        <!-- Scrollable Details Section -->
         <ScrollViewer x:Name="DetailsScrollViewer" Grid.Column="1" Grid.Row="3" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-            <!-- Panel for details -->
             <StackPanel x:Name="DetailsPanel" Background="Black"/>
         </ScrollViewer>
     </Grid>
