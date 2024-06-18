@@ -1,19 +1,9 @@
 version: '3.8'
 
 services:
-  db:
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: Jurnalist1
-      MYSQL_DATABASE: MovieDB
-    volumes:
-      - ./database/database_dump.sql:/docker-entrypoint-initdb.d/dump.sql
-
   web:
     build: .
     ports:
       - "8080:80"
     environment:
-      - ConnectionStrings:DefaultConnection=server=db;port=3306;database=MovieDB;user=root;password=Jurnalist1
-    depends_on:
-      - db
+      - ConnectionStrings__DefaultConnection=server=movielibraryserver.mysql.database.azure.com;port=3306;database=MovieDB;user=adminuser;password=Jurnalist1!

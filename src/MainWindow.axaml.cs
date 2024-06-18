@@ -84,7 +84,7 @@ namespace MyMovieLibrary {
                         Producers = reader["Producers"].ToString(),
                     };
                     // Print the movie details to the console
-                    Console.WriteLine($"Assigned {movie.Actors.Count} actors to movie: {movie.Title}");
+                    Console.WriteLine($"");
                     movies.Add(movie);
                     // Add the genres to the genres set
                     foreach (var genre in movie.Genre.Split(',').Select(g => g.Trim())) {

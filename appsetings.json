@@ -1,6 +1,5 @@
 {
-    "ConnectionStrings": {
-      "DefaultConnection": "server=127.0.0.1;port=3306;database=MovieDB;user=root;password=Jurnalist1"
-    }
+  "ConnectionStrings": {
+    "DefaultConnection": "server=movielibraryserver.mysql.database.azure.com;port=3306;database=MovieDB;user=adminuser;password=Jurnalist1!"
   }
-  
+}

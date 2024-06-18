@@ -1,74 +1,86 @@
-# **Movie Library Project**
+# MyMovieLibrary
 
-Welcome to the **Movie Library Project** repository. This application helps you manage and browse a library of movies, including details about each film and its actors and producers.
+Welcome to MyMovieLibrary! A dynamic, user-friendly movie library application crafted with C#, leveraging the robust Avalonia framework for the interface, and powered by Azure Database. This guide will help you set up and run the project seamlessly on different systems.
 
-## **Prerequisites**
+## Getting Started
 
-Before you begin, make sure you have the following software installed:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-- [.NET SDK](https://dotnet.microsoft.com/download) - **Required** to build and run the project.
-- [MySQL Server](https://dev.mysql.com/downloads/mysql/) - For the database.
-- [Docker (Optional)](https://www.docker.com) - **Recommended** for easier setup and deployment.
+### Prerequisites
 
-## **Installation**
+- .NET 6.0 SDK
+- Docker
+- Git (for cloning the repository)
 
-### **Using Docker (Recommended)**
+### Installing
 
-Docker provides an easy and consistent setup for running the application. Follow these steps:
+1. **Clone the repository**
 
-1. **Clone the Repository:**
-   ```shell
-   git clone https://github.com/aleksabj/MyMovieLibrary.git
-   cd MyMovieLibrary
-   ```
+```bash
+git clone https://github.com/aleksabj/MyMovieLibrary.git
+cd MyMovieLibrary
+```
 
-2. **Build and Run the Application with Docker Compose:**
-   ```shell
-   docker-compose up --build
-   ```
+2. **Build the project**
 
-   This command will build the Docker images and start the application. The application should be accessible at `http://localhost:8080`.
+Using .NET CLI, you can build the project as follows:
 
-### **Manual Setup**
+```bash
+dotnet build
+```
 
-If you prefer setting up the project manually, follow these steps:
+### Setting up Azure Database
 
-1. **Clone the Repository:**
-   ```shell
-   git clone https://github.com/aleksabj/MyMovieLibrary.git
-   cd MyMovieLibrary
-   ```
+My application uses Azure Database for MySQL. The good news is, you don't need to configure the database connection manually. The `appsettings.json` file is pre-configured to connect to the existing Azure-hosted database:
 
-2. **Install .NET Dependencies:**
-   ```shell
-   dotnet restore
-   ```
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "You will find the entire information in my project"
+  }
+}
+```
 
-3. **Set Up the Database:**
+### Running with Docker
 
-   #### On _Unix-based Systems_:
-   ```shell
-   ./setup_database.sh
-   ```
+This application is Docker-ready. Make sure Docker is installed and running on your system. Then, execute the following command in the project root directory:
 
-   #### On _Windows_:
-   Open a command prompt and run:
-   ```shell
-   mysql -u root -p MovieDB < ./database/database_dump.sql
-   ```
+```bash
+docker-compose up --build
+```
 
-4. **Run the Application:**
-   ```shell
-   dotnet run
-   ```
+The command above builds the Docker image for the application and starts it, along with any required services.
 
-   The application will start and should be accessible at `http://localhost:5000`.
+### Running the Application
+
+After setting up the environment, run the application using:
+
+```bash
+dotnet run 
+```
+
+The application should now be running and accessible.
+
+## Project Structure
+
+Here's a brief overview of the main directories and files in the project:
+
+- `DataAccess/`: Contains the Entity Framework Core context and data access layer.
+- `src/`: Source code for the application, including the Avalonia XAML interface.
+- `MovieDB_dump.sql`: SQL dump file for the database.
+- `docker-compose.yml` & `Dockerfile`: Docker configuration files for containerization.
+- `appsettings.json`: Configuration file, including the database connection string.
+- `README.md`: This file, which provides setup and running instructions.
+
+## Contributing
+
+Feel free to fork the repository and submit pull requests. Your contributions are greatly appreciated!
 
 
-### **Project Structure**
+## Acknowledgments
 
-- `database/`: Contains SQL dump files for setting up the database.
-- `src/`: Contains the main application code.
-- `Dockerfile`: Defines the Docker image for the application.
-- `docker-compose.yml`: Configures Docker services for the application.
-- `setup_database.sh`: Script to set up the database on Unix-based systems.
+- The Avalonia team for the fantastic framework.
+- Azure for the managed database services.
+- Docker for simplifying deployment.
+
+I hope you enjoy using MyMovieLibrary as much as I enjoyed building it!
